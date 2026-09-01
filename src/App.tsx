@@ -5,10 +5,12 @@ import ChefStory from './components/ChefStory'
 import Reservation from './components/Reservation'
 import LocationMap from './components/LocationMap'
 import Footer from './components/Footer'
+import CartDrawer from './components/CartDrawer'
+import { CartProvider } from './context/CartContext'
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <Navbar />
       <main>
         <Hero />
@@ -18,7 +20,8 @@ function App() {
         <LocationMap />
       </main>
       <Footer />
-    </>
+      <CartDrawer />
+    </CartProvider>
   )
 }
 

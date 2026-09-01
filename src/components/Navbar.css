@@ -18,12 +18,14 @@
 
 .navbar__brand,
 .navbar__links a,
+.navbar__cart,
 .navbar__toggle {
   color: var(--color-text-inverse);
 }
 
 .navbar--scrolled .navbar__brand,
 .navbar--scrolled .navbar__links a,
+.navbar--scrolled .navbar__cart,
 .navbar--scrolled .navbar__toggle {
   color: var(--color-secondary);
 }
@@ -96,6 +98,42 @@
   min-height: 44px;
   padding: 0 22px;
   font-size: 0.9rem;
+}
+
+.navbar__cart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.2s ease;
+}
+
+.navbar__cart:hover {
+  background: rgba(193, 68, 14, 0.12);
+}
+
+.navbar__cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: 0.68rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .navbar__toggle {

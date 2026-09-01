@@ -153,6 +153,45 @@ export function IconArrowRight(props: IconProps) {
   )
 }
 
+export function IconCart(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <circle cx="10" cy="20" r="1.4" fill="currentColor" stroke="none" />
+      <circle cx="18" cy="20" r="1.4" fill="currentColor" stroke="none" />
+      <path d="M3.5 4h2l2.2 11.2a1.8 1.8 0 0 0 1.8 1.5h8.4a1.8 1.8 0 0 0 1.75-1.4L21.5 8H6.2" />
+    </svg>
+  )
+}
+
+export function IconPlus(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  )
+}
+
+export function IconMinus(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  )
+}
+
+export function IconTrash(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M4.5 7h15" />
+      <path d="M9.5 7V4.8c0-.4.4-.8.9-.8h3.2c.5 0 .9.4.9.8V7" />
+      <path d="M6.5 7l.8 12c.05.9.8 1.6 1.7 1.6h6c.9 0 1.65-.7 1.7-1.6l.8-12" />
+      <line x1="10.2" y1="10.5" x2="10.2" y2="17" />
+      <line x1="13.8" y1="10.5" x2="13.8" y2="17" />
+    </svg>
+  )
+}
+
 export function IconChevronDown(props: IconProps) {
   return (
     <svg {...base} {...props}>
