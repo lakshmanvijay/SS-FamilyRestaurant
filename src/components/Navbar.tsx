@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { IconClose, IconMenu } from './icons'
+import { useCart } from '../context/CartContext'
+import { IconCart, IconClose, IconMenu } from './icons'
 import './Navbar.css'
 
 const NAV_LINKS = [
@@ -12,6 +13,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const { totalCount, openCart } = useCart()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -48,6 +50,16 @@ export default function Navbar() {
         <a href="#reserve" className="btn btn-primary navbar__cta">
           Reserve a Table
         </a>
+
+        <button
+          type="button"
+          className="navbar__cart"
+          aria-label={`Open cart, ${totalCount} item${totalCount === 1 ? '' : 's'}`}
+          onClick={openCart}
+        >
+          <IconCart width={22} height={22} />
+          {totalCount > 0 && <span className="navbar__cart-badge">{totalCount}</span>}
+        </button>
 
         <button
           type="button"
